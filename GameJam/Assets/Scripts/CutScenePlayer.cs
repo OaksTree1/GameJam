@@ -6,7 +6,9 @@ public class CutScenePlayer : MonoBehaviour
 {
 
     Animator animator;
+    public AudioClip Clip;
     Rigidbody2D rigidBody;
+    public AudioSource Audio;
     SpriteRenderer spriteRenderer;
     public bool Stop;
     public int Speed;
@@ -33,10 +35,12 @@ public class CutScenePlayer : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(Xspeed, Yspeed);
             Speed = 1;
+            Audio.PlayOneShot(Clip);
         }
         if(Stop)
         {
             Speed = 0;
+            Audio.Pause();
         }
         stopPlayer.OnCollisionEnter2D(colliderTwoD);
     }

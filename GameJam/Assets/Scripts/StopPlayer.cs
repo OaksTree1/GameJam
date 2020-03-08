@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StopPlayer : MonoBehaviour
 {
+    PlayerMovement player;
     CutScenePlayer CutScenePlayer;
     Dialogue dialogue;
 
@@ -14,6 +15,7 @@ public class StopPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerMovement>();
         CutScenePlayer = FindObjectOfType<CutScenePlayer>();
         dialogue = FindObjectOfType<Dialogue>();
     }

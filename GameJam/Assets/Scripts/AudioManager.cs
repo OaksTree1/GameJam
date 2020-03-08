@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource SourceofAudio;
+    public AudioClip Clip;
     public AudioSource MusicSource;
     public static AudioManager thisInstance = null;
     public float Low = .95f;
@@ -32,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
         SourceofAudio.volume = AudioVolume;
 
-        SourceofAudio.Play();
+        SourceofAudio.PlayOneShot(Clip);
     }
 
 

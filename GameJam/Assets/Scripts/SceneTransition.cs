@@ -10,16 +10,19 @@ public class SceneTransition : MonoBehaviour
 
     public enum Scene
     {
-      StartofGame,
-      Next
+        StartofGame,
+        Next
     }
 
-  
-    public void OnTriggerEnter2D(Collider2D collision, Scene scene)
-    {
+
+
+    public void OnTriggerEnter2D(Collider2D collision)
+
+    { 
+        Debug.Log("wtf");
         if (collision.name == "Player")
         {
-            Debug.Log("butch");
+          Debug.Log("butch");
           SceneManager.LoadScene(NextScene);
             
         }
