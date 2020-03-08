@@ -20,8 +20,6 @@ public class ActivateText : MonoBehaviour
     public bool IsCollison;
 
    
-
-    
     public bool DestroyWhenFinished;
     // Start is called before the first frame update
     void Start()
